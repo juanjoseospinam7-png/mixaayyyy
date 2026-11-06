@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#111111">
+  <title>Te quiero mucho, mi Xay</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+      font-family: "Georgia", "Times New Roman", serif;
+      color: #fff;
+      background:
+        radial-gradient(circle at 15% 15%, #333 0 1px, transparent 2px),
+        radial-gradient(circle at 85% 80%, #444 0 1px, transparent 2px),
+        linear-gradient(145deg, #050505, #202020 55%, #080808);
+      background-size: 70px 70px, 90px 90px, auto;
+    }
+    .card {
+      position: relative;
+      width: min(90vw, 720px);
+      padding: clamp(38px, 8vw, 76px) 26px;
+      text-align: center;
+      border: 1px solid rgba(255,255,255,.55);
+      border-radius: 28px;
+      background: rgba(255,255,255,.07);
+      box-shadow: 0 24px 80px rgba(0,0,0,.55), inset 0 0 35px rgba(255,255,255,.035);
+      backdrop-filter: blur(8px);
+      animation: appear 1s ease both;
+    }
+    .eyebrow {
+      margin: 0 0 18px;
+      font: 600 11px/1.4 Arial, sans-serif;
+      letter-spacing: .42em;
+      text-transform: uppercase;
+      color: #cfcfcf;
+    }
+    h1 {
+      margin: 0;
+      font-size: clamp(2.5rem, 8vw, 5.5rem);
+      line-height: 1.05;
+      font-weight: 500;
+      letter-spacing: -.045em;
+      text-wrap: balance;
+    }
+    h1 span { display: block; color: #bdbdbd; font-style: italic; }
+    .rule {
+      width: 74px;
+      height: 1px;
+      margin: 28px auto 22px;
+      background: #aaa;
+    }
+    .message {
+      margin: 0 auto;
+      max-width: 440px;
+      color: #dedede;
+      font: 15px/1.8 Arial, sans-serif;
+      letter-spacing: .04em;
+    }
+    .paw-row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 22px;
+      margin-top: 34px;
+      font-family: Arial, sans-serif;
+    }
+    .dog {
+      display: inline-block;
+      font-size: clamp(2rem, 6vw, 3.3rem);
+      filter: grayscale(1);
+      animation: float 3s ease-in-out infinite;
+    }
+    .dog:nth-child(2) { animation-delay: .45s; font-size: clamp(2.5rem, 7vw, 4rem); }
+    .dog:nth-child(3) { animation-delay: .9s; }
+    .paw {
+      position: absolute;
+      color: rgba(255,255,255,.16);
+      font: 30px Arial, sans-serif;
+      transform: rotate(-18deg);
+      user-select: none;
+    }
+    .paw.one { top: 22px; left: 25px; }
+    .paw.two { right: 25px; bottom: 22px; transform: rotate(18deg); }
+    .tiny {
+      margin: 28px 0 0;
+      color: #999;
+      font: 10px Arial, sans-serif;
+      letter-spacing: .3em;
+      text-transform: uppercase;
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0) rotate(-4deg); }
+      50% { transform: translateY(-9px) rotate(4deg); }
+    }
+    @keyframes appear {
+      from { opacity: 0; transform: translateY(18px) scale(.98); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <span class="paw one" aria-hidden="true">🐾</span>
+    <span class="paw two" aria-hidden="true">🐾</span>
+
+    <p class="eyebrow">Un mensajito especial</p>
+    <h1>Te quiero mucho <span>mi Xay</span></h1>
+    <div class="rule"></div>
+    <p class="message">
+      Que nunca te falten motivos para sonreír,
+      ni perritos que te acompañen en los días bonitos.
+    </p>
+
+    <div class="paw-row" aria-label="Perritos de decoración">
+      <span class="dog">🐶</span>
+      <span class="dog">🐕</span>
+      <span class="dog">🐶</span>
+    </div>
+    <p class="tiny">Con mucho cariño ♡</p>
+  </main>
+</body>
+</html>
